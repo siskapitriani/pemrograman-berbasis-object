@@ -1,6 +1,5 @@
-package quizutama.soalnomordua;
+package quizutama.jawabannomordua;
 
-import java.util.List;
 import java.util.Scanner;
 
 public class MainSoalNomorDua {
@@ -21,14 +20,12 @@ public class MainSoalNomorDua {
         System.out.println("PILIHAN MENU : " + pilih);
 
         if(pilih == 1){
-            dataWarga.inputDataWarga();
+            dataWarga.inputData();
             System.out.println("Lanjut bayar iuran");
             lanjutBayar = scanner.next();
         }
         if("ya".equalsIgnoreCase(lanjutBayar) || pilih == 2){
-            iuranWarga.inputDataIuran();
-            System.out.println("Lanjut bayar iuran");
-            lanjutBayar = scanner.next();
+            iuranWarga.inputData();
             System.out.println();
             System.out.println();
             String doublePipe = "||";

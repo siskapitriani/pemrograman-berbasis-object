@@ -1,4 +1,4 @@
-package quizutama.soalnomordua;
+package quizutama.jawabannomordua;
 
 import java.util.Scanner;
 
@@ -17,12 +17,12 @@ public class DataWarga {
         return nik;
     }
 
-    public void setNik(String nik) {
-        this.nik = nik;
-    }
-
     public String getNama() {
         return nama;
+    }
+
+    public void setNik(String nik) {
+        this.nik = nik;
     }
 
     public void setNama(String nama) {
@@ -85,25 +85,28 @@ public class DataWarga {
         this.jumlahAnak = jumlahAnak;
     }
 
-    public void inputDataWarga(){
-        String borderRecord = "-----------------o0o-----------------------";
-        Scanner scanner = new Scanner(System.in);
-        System.out.println(borderRecord);
+    public void inputData(){
+        final String borderRecord = "-----------------o0o-----------------------";
+        final Scanner scanner = new Scanner(System.in);
         System.out.println("* * * Data Warga * * *");
         System.out.println("Masukan Nama");
-        nama = scanner.next();
+        final String nama = scanner.next();
         System.out.println("Masukan NIK");
-        nik = scanner.next();
+        final String nik = scanner.next();
         System.out.println("Masukan Alamat");
-        alamat = scanner.next();
+        final String alamat = scanner.next();
         System.out.println("Masukan No. Tlp");
-        noTelp = scanner.next();
+        final String noTelp = scanner.next();
+        this.inputData(nama, nik, alamat, noTelp);
+
         System.out.println(borderRecord);
         System.out.println("* * * Data Pekerjaan * * *");
         System.out.println("Masukan Pekerjaan");
-        pekerjaan = scanner.next();
+        final String namaPekerjaan = scanner.next();
         System.out.println("Masukan Alamat Kantor");
-        alamatKantor = scanner.next();
+        final String alamatKantor = scanner.next();
+        this.inputData(namaPekerjaan, alamatKantor);
+
         System.out.println(borderRecord);
         System.out.println("* * * Data Status * * *");
         System.out.println("Masukan Status");
@@ -112,5 +115,24 @@ public class DataWarga {
         namaSuamiAtauIstri = scanner.next();
         System.out.println("Masukan Jumlah Anak");
         jumlahAnak = scanner.nextInt();
+        this.inputData(status, namaSuamiAtauIstri, jumlahAnak);
+    }
+
+    public void inputData(final String nama, final String nik, final String alamat, final String noTelp) {
+        this.nama = nama;
+        this.nik = nik;
+        this.alamat = alamat;
+        this.noTelp = noTelp;
+    }
+
+    public void inputData(final String pekerjaan, final String alamatKantor){
+        this.pekerjaan = pekerjaan;
+        this.alamatKantor = alamatKantor;
+    }
+
+    public void inputData(final String status, final String namaSuamiAtauIstri, final Integer jumlahAnak){
+        this.status = status;
+        this.namaSuamiAtauIstri = namaSuamiAtauIstri;
+        this.jumlahAnak = jumlahAnak;
     }
 }
