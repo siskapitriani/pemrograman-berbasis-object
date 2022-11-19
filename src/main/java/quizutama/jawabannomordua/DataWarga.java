@@ -90,22 +90,22 @@ public class DataWarga {
         final Scanner scanner = new Scanner(System.in);
         System.out.println("* * * Data Warga * * *");
         System.out.println("Masukan Nama");
-        final String nama = scanner.next();
+        nama = scanner.next();
         System.out.println("Masukan NIK");
-        final String nik = scanner.next();
+        nik = scanner.next();
         System.out.println("Masukan Alamat");
-        final String alamat = scanner.next();
+        alamat = scanner.next();
         System.out.println("Masukan No. Tlp");
-        final String noTelp = scanner.next();
+        noTelp = scanner.next();
         this.inputData(nama, nik, alamat, noTelp);
 
         System.out.println(borderRecord);
         System.out.println("* * * Data Pekerjaan * * *");
         System.out.println("Masukan Pekerjaan");
-        final String namaPekerjaan = scanner.next();
+        pekerjaan = scanner.next();
         System.out.println("Masukan Alamat Kantor");
-        final String alamatKantor = scanner.next();
-        this.inputData(namaPekerjaan, alamatKantor);
+        alamatKantor = scanner.next();
+        this.inputData(pekerjaan, alamatKantor);
 
         System.out.println(borderRecord);
         System.out.println("* * * Data Status * * *");

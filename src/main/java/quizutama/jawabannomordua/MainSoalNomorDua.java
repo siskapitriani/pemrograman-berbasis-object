@@ -15,9 +15,9 @@ public class MainSoalNomorDua {
         System.out.println(borderHeader);
         System.out.println("1. Input data warga");
         System.out.println("2. Input Iuran Warga");
+        System.out.println();
+        System.out.println("PILIHAN MENU : ");
         pilih = scanner.nextInt();
-
-        System.out.println("PILIHAN MENU : " + pilih);
 
         if(pilih == 1){
             dataWarga.inputData();
